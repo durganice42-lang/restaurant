@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison de la Douceur — Handcrafted Luxury Bakery & Desserts</title>
+    <meta name="description" content="Experience handcrafted luxury desserts, delicate pastries, signature pancakes, and sweet moments baked fresh daily with organic ingredients.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Petals Canvas / Background Overlay -->
+    <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="brand-logo" aria-label="Maison de la Douceur Home">
+                <span class="logo-script">Maison de la Douceur</span>
+                <span class="logo-sub">PÂTISSERS & BOUTIQUE</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#signature" class="nav-link">Our Menu</a></li>
+                    <li><a href="#treats" class="nav-link">Signature Desserts</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#story" class="nav-link">Our Story</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" id="cart-btn" aria-label="View Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-count">2</span>
+                </button>
+                <a href="#signature" class="btn-order-nav">Order Now</a>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <!-- Decorative Corner Floral Vectors -->
+            <div class="floral-corner top-left" aria-hidden="true">
+                <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,10 C60,40 120,20 180,60 C220,90 230,160 210,200" stroke="#8fae89" stroke-width="2" fill="none" opacity="0.6"/>
+                    <!-- Leaves -->
+                    <path d="M50,30 C30,15 15,35 35,50 C45,40 50,30 50,30 Z" fill="#7a9a74" opacity="0.7"/>
+                    <path d="M110,35 C130,20 145,40 125,55 C115,45 110,35 110,35 Z" fill="#8fae89" opacity="0.8"/>
+                    <path d="M170,80 C190,65 205,85 185,100 C175,90 170,80 170,80 Z" fill="#6b8e66" opacity="0.7"/>
+                    <!-- Roses -->
+                    <circle cx="45" cy="40" r="18" fill="#f4b6c2" opacity="0.9"/>
+                    <circle cx="45" cy="40" r="12" fill="#e89dae"/>
+                    <circle cx="45" cy="40" r="6" fill="#d8788c"/>
+                    <circle cx="130" cy="45" r="22" fill="#f7c5d0" opacity="0.95"/>
+                    <circle cx="130" cy="45" r="15" fill="#ee9cb0"/>
+                    <circle cx="130" cy="45" r="8" fill="#d97187"/>
+                    <circle cx="190" cy="95" r="16" fill="#f4b6c2" opacity="0.9"/>
+                    <circle cx="190" cy="95" r="10" fill="#e89dae"/>
+                </svg>
+            </div>
+
+            <div class="floral-corner top-right" aria-hidden="true">
+                <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M220,10 C180,40 120,20 60,60 C20,90 10,160 30,200" stroke="#8fae89" stroke-width="2" fill="none" opacity="0.6"/>
+                    <path d="M190,30 C210,15 225,35 205,50 C195,40 190,30 190,30 Z" fill="#7a9a74" opacity="0.7"/>
+                    <path d="M130,35 C110,20 95,40 115,55 C125,45 130,35 130,35 Z" fill="#8fae89" opacity="0.8"/>
+                    <circle cx="195" cy="40" r="20" fill="#f7c5d0" opacity="0.95"/>
+                    <circle cx="195" cy="40" r="13" fill="#ee9cb0"/>
+                    <circle cx="195" cy="40" r="7" fill="#d97187"/>
+                    <circle cx="110" cy="45" r="16" fill="#f4b6c2" opacity="0.9"/>
+                    <circle cx="110" cy="45" r="10" fill="#e89dae"/>
+                </svg>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <span class="hero-badge gsap-hero-element">Artisan French Bakery</span>
+                    <h1 class="hero-heading gsap-hero-element">
+                        Baked with Love,<br>
+                        <span class="cursive-accent">Served with Elegance.</span>
+                    </h1>
+                    <p class="hero-description gsap-hero-element">
+                        Discover handcrafted desserts, delicate pastries, and sweet moments made fresh every single morning using organic butter and heirloom recipes.
+                    </p>
+                    <div class="hero-cta-group gsap-hero-element">
+                        <a href="#signature" class="btn-primary">
+                            <span>Explore Our Menu</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#story" class="btn-secondary">
+                            <span>Discover Our Story</span>
+                        </a>
+                    </div>
+                    <div class="hero-features gsap-hero-element">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                            <span>100% Organic Ingredients</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Handmade Daily</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container gsap-hero-image">
+                    <div class="dessert-card-3d" id="hero-3d-card">
+                        <div class="floating-rose rose-1" aria-hidden="true"></div>
+                        <div class="floating-rose rose-2" aria-hidden="true"></div>
+                        <div class="image-glow"></div>
+                        <div class="dessert-frame-outer">
+                            <div class="dessert-frame-inner">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1200&q=85" 
+                                     alt="Stack of fluffy souffle pancakes with powdered sugar, fresh strawberries, and maple syrup on a white ceramic plate" 
+                                     class="hero-img" 
+                                     id="hero-img">
+                                <div class="shine-overlay" id="shine-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="hero-img-badge">
+                            <span class="badge-title">Chef's Special</span>
+                            <span class="badge-sub">Soufflé Pancakes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scalloped Wave Divider -->
+            <div class="section-divider wave-divider" aria-hidden="true">
+                <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+                    <path d="M0,30 C240,70 480,10 720,50 C960,90 1200,20 1440,60 L1440,100 L0,100 Z" fill="#fdfbf7"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SIGNATURE DESSERTS SECTION -->
+        <section class="signature-section" id="signature">
+            <div class="section-container">
+                <div class="section-header gsap-reveal">
+                    <span class="section-tag">Handcrafted Delights</span>
+                    <h2 class="section-title">Signature Desserts</h2>
+                    <div class="title-ornament">
+                        <span class="line"></span>
+                        <i class="fa-solid fa-seedling"></i>
+                        <span class="line"></span>
+                    </div>
+                    <p class="section-description">
+                        Every pastry is a masterpiece of texture and flavor, thoughtfully curated by our master pastry chefs.
+                    </p>
+                </div>
+
+                <div class="signature-grid">
+                    <!-- Card 1 -->
+                    <article class="signature-card gsap-card">
+                        <div class="card-frame-container">
+                            <div class="lace-frame-svg" aria-hidden="true">
+                                <svg viewBox="0 0 200 200">
+                                    <circle cx="100" cy="100" r="92" stroke="#e0c3fc" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+                                    <circle cx="100" cy="100" r="97" stroke="#c87d85" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Signature Fluffy Soufflé Pancakes stacked high with berries" 
+                                     loading="lazy">
+                            </div>
+                            <span class="card-price">$16.50</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Signature Pancakes</h3>
+                            <p class="card-desc">Light and airy cloud pancakes topped with organic berries, whipped chantilly, and warm maple reduction.</p>
+                            <button class="btn-discover" data-name="Signature Pancakes" data-price="16.50">
+                                <span>Discover More</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="signature-card gsap-card">
+                        <div class="card-frame-container">
+                            <div class="lace-frame-svg" aria-hidden="true">
+                                <svg viewBox="0 0 200 200">
+                                    <circle cx="100" cy="100" r="92" stroke="#e0c3fc" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+                                    <circle cx="100" cy="100" r="97" stroke="#c87d85" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Velvety New York style cheesecake with raspberry glaze" 
+                                     loading="lazy">
+                            </div>
+                            <span class="card-price">$14.00</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Creamy Cheesecakes</h3>
+                            <p class="card-desc">Velvety artisan cream cheese baked on a crisp graham-almond crust with fresh raspberry glaze.</p>
+                            <button class="btn-discover" data-name="Creamy Cheesecakes" data-price="14.00">
+                                <span>Discover More</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="signature-card gsap-card">
+                        <div class="card-frame-container">
+                            <div class="lace-frame-svg" aria-hidden="true">
+                                <svg viewBox="0 0 200 200">
+                                    <circle cx="100" cy="100" r="92" stroke="#e0c3fc" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+                                    <circle cx="100" cy="100" r="97" stroke="#c87d85" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Belgian Dark Chocolate Molten Lava Cake with powdered sugar" 
+                                     loading="lazy">
+                            </div>
+                            <span class="card-price">$15.00</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chocolate Delights</h3>
+                            <p class="card-desc">Rich 70% Valrhona dark chocolate molten cake served with Madagascar vanilla gelato and gold leaf.</p>
+                            <button class="btn-discover" data-name="Chocolate Delights" data-price="15.00">
+                                <span>Discover More</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="signature-card gsap-card">
+                        <div class="card-frame-container">
+                            <div class="lace-frame-svg" aria-hidden="true">
+                                <svg viewBox="0 0 200 200">
+                                    <circle cx="100" cy="100" r="92" stroke="#e0c3fc" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+                                    <circle cx="100" cy="100" r="97" stroke="#c87d85" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" 
+                                     alt="Fresh Seasonal Fruit Tart with vanilla bean custard" 
+                                     loading="lazy">
+                            </div>
+                            <span class="card-price">$13.50</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Fresh Fruit Desserts</h3>
+                            <p class="card-desc">Butter sablé shell layered with Tahitian vanilla pastry cream and sweet organic farm-fresh berries.</p>
+                            <button class="btn-discover" data-name="Fresh Fruit Desserts" data-price="13.50">
+                                <span>Discover More</span>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLORAL SEPARATOR -->
+        <div class="floral-divider-container" aria-hidden="true">
+            <div class="floral-divider-graphic">
+                <span class="divider-line"></span>
+                <div class="rose-cluster">
+                    <svg width="120" height="40" viewBox="0 0 120 40" fill="none">
+                        <circle cx="60" cy="20" r="12" fill="#f4b6c2"/>
+                        <circle cx="60" cy="20" r="8" fill="#e89dae"/>
+                        <circle cx="42" cy="22" r="9" fill="#f7c5d0"/>
+                        <circle cx="78" cy="22" r="9" fill="#f7c5d0"/>
+                        <path d="M30,24 C20,15 15,25 25,30 Z" fill="#7a9a74"/>
+                        <path d="M90,24 C100,15 105,25 95,30 Z" fill="#7a9a74"/>
+                    </svg>
+                </div>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+
+        <!-- OUR SPECIAL TREATS SECTION -->
+        <section class="treats-section" id="treats">
+            <div class="section-container">
+                <div class="section-header gsap-reveal">
+                    <span class="section-tag light">Seasonal Exclusives</span>
+                    <h2 class="section-title light">Chef’s Special Creations</h2>
+                    <p class="section-description light">
+                        Rotated weekly, featuring rare botanical infusions and seasonal orchard fruits.
+                    </p>
+                </div>
+
+                <div class="treats-wrapper">
+                    <!-- Feature 1 -->
+                    <div class="treat-feature-card gsap-treat-card">
+                        <div class="treat-img-box">
+                            <div class="vintage-border"></div>
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" 
+                                 alt="Rose Pistachio Éclair topped with dried rose petals" 
+                                 loading="lazy">
+                        </div>
+                        <div class="treat-details">
+                            <span class="treat-badge">Popular Choice</span>
+                            <h3 class="treat-title">Rose & Pistachio Éclair</h3>
+                            <p class="treat-text">Light choux pastry casing filled with delicate French rose water diplomat cream, finished with crushed Sicilian pistachios and edible rose petals.</p>
+                            <div class="treat-meta">
+                                <span class="treat-price">$9.50</span>
+                                <button class="btn-treat-order" data-name="Rose & Pistachio Éclair" data-price="9.50">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="treat-feature-card reverse gsap-treat-card">
+                        <div class="treat-img-box">
+                            <div class="vintage-border"></div>
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" 
+                                 alt="Wild Berry Pavlova with crisp meringue shell" 
+                                 loading="lazy">
+                        </div>
+                        <div class="treat-details">
+                            <span class="treat-badge">Chef Recommendation</span>
+                            <h3 class="treat-title">Wild Berry Pavlova</h3>
+                            <p class="treat-text">Crisp-on-the-outside, chewy-in-the-center meringue nest filled with whipped vanilla bean chantilly cream and glazed wild berries.</p>
+                            <div class="treat-meta">
+                                <span class="treat-price">$12.00</span>
+                                <button class="btn-treat-order" data-name="Wild Berry Pavlova" data-price="12.00">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="treat-feature-card gsap-treat-card">
+                        <div class="treat-img-box">
+                            <div class="vintage-border"></div>
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" 
+                                 alt="Artisan Croissants and Danish Pastries stack" 
+                                 loading="lazy">
+                        </div>
+                        <div class="treat-details">
+                            <span class="treat-badge">Morning Harvest</span>
+                            <h3 class="treat-title">Matcha Mille-Feuille</h3>
+                            <p class="treat-text">Caramelized puff pastry sheets layered with Kyoto ceremonial grade matcha mousseline cream and white chocolate shavings.</p>
+                            <div class="treat-meta">
+                                <span class="treat-price">$11.50</span>
+                                <button class="btn-treat-order" data-name="Matcha Mille-Feuille" data-price="11.50">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESSERT GALLERY SECTION -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-container">
+                <div class="section-header gsap-reveal">
+                    <span class="section-tag">Visual Feast</span>
+                    <h2 class="section-title">Our Sweet Masterpieces</h2>
+                    <div class="title-ornament">
+                        <span class="line"></span>
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span class="line"></span>
+                    </div>
+                    <p class="section-description">
+                        Click on any creation to inspect our pastry craftsmanship up close.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Item 1 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=1200&q=85" data-title="Blush Macaron Tower" data-desc="Handcrafted almond shell macarons filled with French buttercream and raspberry rose ganache.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=700&q=80" alt="Blush Macaron Tower" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Blush Macaron Tower</h4>
+                            <p>Rose Buttercream & Raspberry</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=85" data-title="Raspberry Butter Scones" data-desc="Freshly baked flaky butter scones dusted with powdered sugar and organic raspberry jam.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=700&q=80" alt="Raspberry Butter Scones" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Raspberry Butter Scones</h4>
+                            <p>Organic Jam & Clotted Cream</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=85" data-title="Vanilla Cream Donut" data-desc="Glazed brioche ring filled with Tahitian bean pastry cream and gold leaf accents.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80" alt="Vanilla Cream Donut" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Vanilla Custard Brioche</h4>
+                            <p>Tahitian Bean Custard</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=85" data-title="Strawberry Chiffon Cake" data-desc="Airy chiffon sponge layered with whipped Japanese chantilly cream and fresh orchard strawberries.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80" alt="Strawberry Chiffon Cake" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Strawberry Chiffon Cake</h4>
+                            <p>Whipped Chantilly & Berries</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=85" data-title="Caramel Pecan Tart" data-desc="Golden sablé tart shell filled with sea-salted butter caramel and toasted pecans.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=700&q=80" alt="Caramel Pecan Tart" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Caramel Pecan Tart</h4>
+                            <p>Sea Salt Caramel & Roasted Pecans</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="gallery-item gsap-gallery-item" data-full="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85" data-title="Honey Lavender Tartlet" data-desc="Infused wildflower honey and lavender ganache in a crisp almond crust.">
+                        <div class="gallery-frame">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Honey Lavender Tartlet" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Honey Lavender Tartlet</h4>
+                            <p>Lavender Ganache & Honey</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR STORY SECTION -->
+        <section class="story-section" id="story">
+            <div class="section-container">
+                <div class="story-grid">
+                    <div class="story-image-column gsap-reveal-left">
+                        <div class="story-frame-outer">
+                            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1000&q=85" alt="Master baker carefully decorating fresh pastries" loading="lazy">
+                            <div class="experience-badge">
+                                <span class="exp-years">15+</span>
+                                <span class="exp-text">Years of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-text-column gsap-reveal-right">
+                        <span class="section-tag">Our Philosophy</span>
+                        <h2 class="story-heading">A Little Story of Sweetness</h2>
+                        <p class="story-lead">
+                            Founded in the heart of Provence in 2009, Maison de la Douceur was born out of an unyielding passion for traditional French pastry craftsmanship.
+                        </p>
+                        <p class="story-paragraph">
+                            We believe that baking is a form of poetry. Every morning at 4:00 AM, our bakers begin kneading organic flour, whipping Normandy butter, and simmering fresh fruits into small-batch conserves. We source single-origin vanilla beans from Madagascar and cocoa from ethical fair-trade farms.
+                        </p>
+                        <div class="quote-box">
+                            <p>“We don’t just bake pastries; we create sweet memories that linger on the palate and warm the heart.”</p>
+                            <span class="quote-author">— Chef Élodie Laurent, Founder</span>
+                        </div>
+                        <a href="#contact" class="btn-primary">
+                            <span>Visit Our Boutique</span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="section-container">
+                <div class="section-header gsap-reveal">
+                    <span class="section-tag">Kind Words</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <div class="title-ornament">
+                        <span class="line"></span>
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="testimonial-slider-container">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                “The Soufflé Pancakes are unlike anything I’ve ever tasted! So feather-light they literally melt in your mouth. The rose-infused atmosphere makes every breakfast feel like a luxury holiday in Paris.”
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Sophia Redmayne">
+                                <div>
+                                    <h4 class="author-name">Sophia Redmayne</h4>
+                                    <span class="author-role">Food Critic & Culinary Journalist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                “We ordered our wedding dessert tower from Maison de la Douceur, and our guests are still raving about the Rose & Pistachio Éclairs! The attention to detail and romantic presentation exceeded all our dreams.”
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Julian & Clara Vance">
+                                <div>
+                                    <h4 class="author-name">Julian & Clara Vance</h4>
+                                    <span class="author-role">Loyal Patrons</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                “An enchanting boutique bakery with unparalleled craftsmanship. Their caramel pecan tarts and dark chocolate molten cakes are absolute perfection. A true gem!”
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Genevieve Dupont">
+                                <div>
+                                    <h4 class="author-name">Genevieve Dupont</h4>
+                                    <span class="author-role">Pastry Connoisseur</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="slider-btn prev" id="slider-prev" aria-label="Previous Testimonial">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="slider-dots" id="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                        <button class="slider-btn next" id="slider-next" aria-label="Next Testimonial">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION -->
+        <section class="final-cta-section" id="cta">
+            <div class="section-container">
+                <div class="cta-card gsap-reveal">
+                    <div class="cta-floral-bg" aria-hidden="true"></div>
+                    <div class="cta-content">
+                        <span class="cta-tag">Sweet Invitation</span>
+                        <h2 class="cta-heading">Make Every Moment Sweeter.</h2>
+                        <p class="cta-text">
+                            Find your favorite treats and let us add a touch of handmade luxury to your special occasions and everyday celebrations.
+                        </p>
+                        <a href="#signature" class="btn-primary large">
+                            <span>Order Your Favorites</span>
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="#hero" class="brand-logo footer-logo">
+                        <span class="logo-script">Maison de la Douceur</span>
+                        <span class="logo-sub">PÂTISSERS & BOUTIQUE</span>
+                    </a>
+                    <p class="footer-bio">
+                        Crafting delicate French pastries, signature souffle pancakes, and artisanal cakes with love and elegance since 2009.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#signature">Our Menu</a></li>
+                        <li><a href="#treats">Signature Desserts</a></li>
+                        <li><a href="#gallery">Dessert Gallery</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Opening Hours & Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Boutique Hours</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> <strong>7:30 AM - 7:00 PM</strong></li>
+                        <li><span>Saturday:</span> <strong>8:00 AM - 8:00 PM</strong></li>
+                        <li><span>Sunday:</span> <strong>8:00 AM - 5:00 PM</strong></li>
+                    </ul>
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-location-dot"></i> 42 Avenue des Roses, Provence</p>
+                        <p><i class="fa-solid fa-phone"></i> +1 (800) 555-BAKE</p>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Join Our Sweet Circle</h4>
+                    <p class="newsletter-desc">Subscribe to receive exclusive seasonal menu invites and secret recipes.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="input-wrapper">
+                            <input type="email" id="newsletter-email" placeholder="Your email address..." required>
+                            <button type="submit" aria-label="Subscribe to newsletter">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="form-feedback" id="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maison de la Douceur. All Rights Reserved. Crafted with <i class="fa-solid fa-heart"></i> for sweet lovers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <div class="lightbox-img-container">
+                <img src="" id="lightbox-img" alt="Enlarged dessert view">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOPPING BAG MODAL -->
+    <div class="cart-modal" id="cart-modal" aria-hidden="true">
+        <div class="cart-backdrop" id="cart-backdrop"></div>
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Your Sweet Order</h3>
+                <button class="cart-close" id="cart-close">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Items rendered dynamically via JS -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Total:</span>
+                    <strong id="cart-total-price">$30.50</strong>
+                </div>
+                <button class="btn-primary checkout-btn" id="checkout-btn">
+                    <span>Proceed to Checkout</span>
+                    <i class="fa-solid fa-credit-card"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
